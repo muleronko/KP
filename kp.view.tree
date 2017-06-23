@@ -1,0 +1,55 @@
+$my_kp $mol_page
+	title -
+	head /
+		<= Header $mol_view
+			sub /
+				<= Logo_start_page $mol_image
+					uri \-/my/kp/thumbs/logotextmini.svg
+				<= Menu $mol_view
+				<= Exit $mol_link
+					arg *
+						link null
+					sub /
+						<= close_title \Войти
+	body /
+		<= Form_box $mol_view
+			sub /
+				<= Logo_main $mol_image
+					uri \-/my/kp/thumbs/logomain.svg
+				<= Sign_up_form $mol_view
+					sub /
+						<= Form $mol_form
+							form_fields /
+								<= Table_id $mol_form_field
+									name <= table_id_label @ \Табельный номер
+									errors <= table_id_errors /
+									control <= Table_id_control $mol_string
+										hint <= table_id_hint \231456
+										value?val <=> table_id?val \
+								<= Password $mol_form_field
+									name <= password_label @ \Пароль
+									errors <= password_errors /
+									control <= password_control $mol_string
+										hint <= password_hint \******
+										value?val <=> password?val \
+							buttons / 
+								<= Login_submit $mol_button_minor
+									title <= login_submit_label @ \Войти
+									event_click?val <=> event_submit?val null
+	foot /
+		<= Footer $mol_view
+			sub /
+				<= Logo_lo $mol_image
+					uri \-/my/kp/thumbs/logolo.svg
+				<= Box_phone $mol_text
+					text <= phone \
+						\Тех.поддержка:
+						\8(812) 456-11-00
+				<= Box_link_help $mol_text
+					text <= help \
+						\[Получить / восстановить доступ](#)
+						\[Инструкция по работе с порталом](#)
+				<= Box_link_web $mol_text
+					text <= web \
+						\[Официальный сайт Администрации ЛО](http://lenobl.ru/)
+						\[Официальный сайт ГосУслуг](https://www.gosuslugi.ru/)

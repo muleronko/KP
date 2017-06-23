@@ -1,6 +1,6 @@
 namespace $.$mol {
 
-	export class $my_gos extends $.$my_gos {
+	export class $my_kp extends $.$my_kp {
 
 	}
 

@@ -1,0 +1,87 @@
+:root {
+	--mol_skin_base: #253688;
+	--gray-color: #EEF0F0;
+}
+
+[my_kp] {
+	background: var(--white)
+}
+
+[my_kp_body] {
+	width: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+[my_kp_head] {
+	min-height: calc( 1.75em + 2rem );
+	justify-content: center;
+}
+
+[my_kp_logo_main] {
+	margin-left: .5rem;
+	flex-grow: 5;
+}
+
+[my_kp_form_box] {
+	display: flex;
+	flex-wrap: wrap;
+	width: 22rem;
+}
+
+[my_kp_table_id_control] {
+	width: 20rem;	
+}
+
+[my_kp_exit] {
+	display: flex;
+	align-items: center;
+}
+
+[my_kp_menu] {
+	
+}
+
+[my_kp_foot] {
+	background: var(--mol_skin_light);
+	min-height: calc( 2.25em + 4rem );
+	font-size: .9em;
+	font-weight: lighter;
+	display: flex;
+	justify-content: center;
+}
+
+[my_kp_header],
+[my_kp_footer] {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 1200px;
+}
+
+[my_kp_box_phone],
+[my_kp_box_link_help],
+[my_kp_box_link_web] {
+	background: none;
+	box-shadow: none;
+	color: black;
+	display: flex;
+	align-self: center;
+}
+
+[my_kp_box_link_help],
+[my_kp_box_link_web] {
+	color: var(--mol_skin_base);
+}
+
+[my_kp_logo_start_page],
+[my_kp_logo_main],
+[my_kp_logo_lo],
+[my_kp_box_phone] {
+	box-shadow: none;
+}
+
+[my_kp_logo_lo] {
+	padding: 1rem
+}
