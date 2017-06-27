@@ -1,0 +1,66 @@
+$saprun_stuff $mol_page
+	title -
+	head /
+		<= Header $saprun_stuff_head
+	body /
+		<= Body_singup $saprun_stuff_form_box
+	foot /
+		<= Footer $saprun_stuff_foot
+	
+$saprun_stuff_head $mol_view
+	sub /
+		<= Logo_start_page $mol_image
+			uri \-/saprun/stuff/thumbs/logotextmini.svg
+		<= Menu $mol_view
+		<= Exit $mol_link
+			arg *
+				link null
+			sub /
+				<= close_title \Выход
+				
+$saprun_stuff_form_box $mol_view
+	sub /
+		<= Logo_main $mol_image
+			uri \-/saprun/stuff/thumbs/logo_main.png
+		<= Sign_up_form $mol_view
+			sub /
+				<= Form $mol_form
+					form_fields /
+						<= Table_id $mol_form_field
+							name <= table_id_label @ \Табельный номер
+							errors <= table_id_errors /
+							control <= Table_id_control $mol_string
+								hint <= table_id_hint \231456
+								value?val <=> table_id?val \
+						<= Password $mol_form_field
+							name <= password_label @ \Пароль
+							errors <= password_errors /
+							control <= password_control $mol_string
+								hint <= password_hint \******
+								value?val <=> password?val \
+					buttons / 
+						<= Login_submit $mol_button_minor
+							title <= login_submit_label @ \Войти
+							event_click?val <=> event_submit?val null
+							
+$saprun_stuff_foot $mol_view
+	sub /
+		<= Logo_link_footer $mol_link
+			uri \http://lenobl.ru
+			sub /
+				<= Logo_footer $mol_image
+					uri \-/saprun/stuff/thumbs/logo_foot.png
+		<= Box_phone $mol_text
+			text <= phone \
+				\Тех.поддержка:
+				\8(812) 456-11-00
+		<= Box_link_help $mol_link
+			arg *
+				access null
+			sub /
+				<= access \Получить / восстановить доступ
+		<= Box_link_manual $mol_link
+			arg *
+				manual null
+			sub /
+				<= manual \Инструкция по работе с порталом
