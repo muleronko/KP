@@ -1,0 +1,93 @@
+:root {
+	--mol_skin_base: #253688;
+	--gray-color: #EEF0F0;
+}
+
+[saprun_stuff] {
+	background: white;
+}
+
+[saprun_stuff_body] {
+	width: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+[saprun_stuff_head] {
+	min-height: calc( 1.75em + 2rem );
+	justify-content: center;
+}
+
+[saprun_stuff_form_box_logo_main] {
+	margin-left: .5rem;
+	flex-grow: 5;
+}
+
+[saprun_stuff_form_box] {
+	display: flex;
+	flex-wrap: wrap;
+	width: 22rem;
+}
+
+[saprun_stuff_form_box_table_id_control] {
+	width: 20rem;
+}
+
+[saprun_stuff_head_logo_start_page] {
+	padding: 1rem;
+}
+
+[saprun_stuff_head_exit] {
+	display: flex;
+	align-items: center;
+	display: none;
+}
+
+[saprun_stuff_foot] {
+	background: var(--mol_skin_light);
+	min-height: calc( 2.25em + 4rem );
+	font-size: .8rem;
+	font-weight: lighter;
+	display: flex;
+	justify-content: center;
+}
+
+[saprun_stuff_header],
+[saprun_stuff_footer] {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	width: 1200px;
+}
+
+[saprun_stuff_foot_logo_footer] {
+	margin: .5rem;
+}
+
+[saprun_stuff_foot_box_phone] {
+	padding: 0;
+}
+
+[saprun_stuff_foot_box_phone],
+[saprun_stuff_foot_box_link_help],
+[saprun_stuff_foot_box_link_manual] {
+	background: none;
+	box-shadow: none;
+	color: black;
+	display: flex;
+	align-self: center;
+}
+
+[saprun_stuff_foot_box_link_help],
+[saprun_stuff_foot_box_link_manual] {
+	color: var(--mol_skin_base);
+}
+
+[saprun_stuff_head_logo_start_page],
+[saprun_stuff_form_box_logo_main],
+[saprun_stuff_foot_logo_footer],
+[saprun_stuff_foot_box_phone] {
+	box-shadow: none;
+}
