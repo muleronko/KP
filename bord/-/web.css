@@ -45,8 +45,8 @@
 [mol_view][mol_view_error="$mol_atom_wait"] {
     background-image: repeating-linear-gradient(
 		45deg,
-		rgba(58, 140, 203, 0.025),
-		rgba(58, 140, 203, 0.025) 9px,
+		rgba(37, 54, 136, 0.025),
+		rgba(37, 54, 136, 0.025) 9px,
 		rgba(255, 255, 255, .015) 10px,
 		rgba(255, 255, 255, .015) 20px
 	);
@@ -89,8 +89,8 @@
     color: rgba(0, 0, 0, .9)
 }
 [mol_page_head] {
-    background: #3a8ccb;
-    color: rgb(251, 253, 254);
+    background: #253688;
+    color: rgb(251, 251, 254);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -123,8 +123,8 @@
     margin: 0
 }
 [mol_page_foot] {
-    background: #3a8ccb;
-    color: rgb(251, 253, 254);
+    background: #253688;
+    color: rgb(251, 251, 254);
     display: flex;
     justify-content: space-between;
     flex: 0 0 auto;
@@ -187,8 +187,8 @@
     color: rgba(0, 0, 0, .9)
 }
 [mol_button_major] {
-    background-color: rgb(221, 14, 62);
-    color: rgb(250, 255, 254);
+    background-color: rgb(138, 31, 10);
+    color: rgb(250, 254, 255);
     box-shadow: 0 0 0 1px rgba(230, 230, 230, .75)
 }
 [mol_button_danger] {
@@ -210,7 +210,7 @@
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .2)
 }
 [mol_button_major]:hover {
-    background-color: rgb(197, 13, 55)
+    background-color: rgb(114, 26, 9)
 }
 [mol_button_danger]:hover {
     background-color: rgba(255, 26, 26, 0.75)
@@ -393,7 +393,7 @@
     padding: 1px
 }
 [mol_text_type="text-link"] {
-    color: #3a8ccb;
+    color: #253688;
     text-decoration: none
 }
 [mol_text_link]:hover ,
@@ -535,7 +535,7 @@
     align-items: stretch
 }
 [mol_form_field_bid] {
-    color: rgb(221, 14, 62);
+    color: rgb(138, 31, 10);
     margin-left: .5rem;
     display: inline-block
 }
@@ -571,6 +571,125 @@
     box-shadow: none;
     -ms-grid-row-align: center;
         align-self: center
+}
+[mol_link] {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: .5rem;
+    box-sizing: border-box
+}
+[mol_link]:not([mol_link_current]):hover {
+    background-color: rgba(0, 0, 0, .05)
+}
+[mol_link]:not([mol_link_current]):focus {
+    background-color: rgba(0, 0, 0, .05);
+    box-shadow: 0 0 0 1px var(--mol_skin_hover_line)
+}
+[mol_link_current] {
+    background-color: #253688;
+    color: white
+}
+[mol_link]:focus {
+    outline: none
+}
+[mol_book] {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    overflow: hidden;
+    flex: 1 1 auto;
+    align-self: stretch;
+    margin: 0;
+    box-shadow: 0 0 0 1px rgba(230, 230, 230, .75);
+    transform: translateZ( 0 )
+}
+[mol_book_placeholder] {
+    display: flex;
+    flex: 1000 1 400px;
+    order: 1;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, .5);
+    padding: 1rem
+}
+[mol_book] > *:not([mol_book_page_visible]) {
+    position: absolute;
+    opacity: 0;
+    transform: translateX( -100% ) scale( 0 , 1 )
+}
+@keyframes mol_book_page_show {
+    from {
+        transform: translateX( 100% ) scale( 0 , 1 );
+        opacity: 0
+    }
+}
+[mol_book] > * {
+    position: relative;
+    animation: mol_book_page_show ease-out .2s;
+    background: #fcfcfc;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
+    z-index: 0;
+    min-height: 100%;
+    max-height: 100%
+}
+[mol_book] > *:first-child {
+    animation: none
+}
+[saprun_stuff_bord_body] {
+    padding: 0 5rem
+}
+[saprun_stuff_bord_menu_page] [mol_page_head],
+[saprun_stuff_bord_bord_page] [mol_page_head] {
+    color: black;
+    background: white
+}
+[saprun_stuff_bord_menu_page] [mol_page_title],
+[saprun_stuff_bord_bord_page] [mol_page_title] {
+    margin: .2em .5em
+}
+[saprun_stuff_bord_dashbord] {
+    height: 2rem
+}
+[saprun_stuff_bord_close] {
+    padding: 0 .2em
+}
+[saprun_stuff_bord_head] {
+    min-height: calc( 1.75em + 2rem );
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 5rem;
+    font-weight: 100
+}
+[saprun_stuff_bord_head_menu] a, [saprun_stuff_bord_head_exit] {
+    color: RGBA(255, 255, 255, 0.85);
+    font-size: 15px
+}
+[saprun_stuff_bord_head_menu] a:hover,
+[saprun_stuff_bord_head_exit]:hover {
+    color: RGBA(255, 255, 255, 1)
+}
+[saprun_stuff_bord_head_logo_start_page] {
+    box-shadow: none;
+    align-content: center;
+    border-radius: 0;
+    margin-right: 1rem
+}
+[saprun_stuff_bord_head_menu] {
+    flex-grow: 6
+}
+[saprun_stuff_bord_head_evens] {
+    padding: .1em .4em;
+    font-size: .75em;
+    box-shadow: none;
+    margin-right: .75rem;
+    background: #D0021B
 }
 
 /*# sourceMappingURL=web.css.map */

@@ -1,5 +1,10 @@
 namespace $ { export class $saprun_stuff extends $mol_page {
 
+	/// head null
+	head() {
+		return <any> null
+	}
+
 	/// Body_singup $saprun_stuff_form_box
 	@ $mol_mem()
 	Body_singup() {
@@ -11,15 +16,35 @@ namespace $ { export class $saprun_stuff extends $mol_page {
 		return [].concat( this.Body_singup() )
 	}
 
+	/// foot null
+	foot() {
+		return <any> null
+	}
+
 } }
 
 namespace $ { export class $saprun_stuff_form_box extends $mol_view {
 
-	/// Logo_main $mol_image uri \-/saprun/stuff/thumbs/logo_main.png
+	/// Logo_main $mol_image uri \-/saprun/stuff/thumbs/logo.png
 	@ $mol_mem()
 	Logo_main() {
 		return new $mol_image().setup( obj => { 
-			obj.uri = () => "-/saprun/stuff/thumbs/logo_main.png"
+			obj.uri = () => "-/saprun/stuff/thumbs/logo.png"
+		} )
+	}
+
+	/// name \
+	/// 	\# Кадровый портал
+	/// 	\Правительства Ленинградской области
+	name() {
+		return "# Кадровый портал\nПравительства Ленинградской области"
+	}
+
+	/// Logo_name $mol_text text <= name
+	@ $mol_mem()
+	Logo_name() {
+		return new $mol_text().setup( obj => { 
+			obj.text = () => this.name()
 		} )
 	}
 
@@ -158,9 +183,10 @@ namespace $ { export class $saprun_stuff_form_box extends $mol_view {
 
 	/// sub / 
 	/// 	<= Logo_main 
+	/// 	<= Logo_name 
 	/// 	<= Sign_up_form
 	sub() {
-		return [].concat( this.Logo_main() , this.Sign_up_form() )
+		return [].concat( this.Logo_main() , this.Logo_name() , this.Sign_up_form() )
 	}
 
 } }

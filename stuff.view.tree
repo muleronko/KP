@@ -1,14 +1,18 @@
 $saprun_stuff $mol_page
 	title -
-	head -
+	head null
 	body /
 		<= Body_singup $saprun_stuff_form_box
-	foot -
+	foot null
 	
 $saprun_stuff_form_box $mol_view
 	sub /
 		<= Logo_main $mol_image
-			uri \-/saprun/stuff/thumbs/logo_main.png
+			uri \-/saprun/stuff/thumbs/logo.png
+		<= Logo_name $mol_text
+			text <=  name \
+				\# Кадровый портал
+				\Правительства Ленинградской области
 		<= Sign_up_form $mol_view
 			sub /
 				<= Form $mol_form

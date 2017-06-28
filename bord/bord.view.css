@@ -1,0 +1,64 @@
+:root {
+	--mol_skin_base: #253688;
+}
+
+[saprun_stuff_bord_body] {
+	padding: 0 5rem;
+}
+
+[saprun_stuff_bord_menu_page] [mol_page_head],
+[saprun_stuff_bord_bord_page] [mol_page_head] {
+	color: black;
+	background: white;
+}
+[saprun_stuff_bord_menu_page] [mol_page_title],
+[saprun_stuff_bord_bord_page] [mol_page_title] {
+	margin: .2em .5em;
+}
+[saprun_stuff_bord_dashbord] {
+	height: 2rem;
+}
+[saprun_stuff_bord_close] {
+	padding: 0 .2em;
+}
+
+
+[saprun_stuff_bord_head] {
+	min-height: calc( 1.75em + 2rem );
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 5rem;
+	font-weight: 100;
+}
+
+[saprun_stuff_bord_head_menu] a, [saprun_stuff_bord_head_exit]
+{
+	color: RGBA(255, 255, 255, 0.85);
+	font-size: 15px;
+}
+[saprun_stuff_bord_head_menu] a:hover,
+[saprun_stuff_bord_head_exit]:hover
+{
+	color: RGBA(255, 255, 255, 1);
+}
+
+[saprun_stuff_bord_head_logo_start_page] {
+	box-shadow: none;
+	align-content: center;
+	border-radius: 0;
+	margin-right: 1rem;
+}
+
+[saprun_stuff_bord_head_menu] {
+	flex-grow: 6;
+}
+
+[saprun_stuff_bord_head_evens] {
+	padding: .1em .4em;
+	font-size: .75em;
+	box-shadow: none;
+	margin-right: .75rem;
+	background: #D0021B;
+}

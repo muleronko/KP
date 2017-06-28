@@ -5,6 +5,15 @@
 	align-items: center;
 }
 
+[saprun_stuff_body_singup] {
+	justify-content: center;
+	width: 20rem;
+}
+
+[saprun_stuff_form_box_logo_name] {
+	align-items: center;
+}
+
 [saprun_stuff_form_box] {
 	display: flex;
 	flex-wrap: wrap;
@@ -22,4 +31,10 @@
 
 [saprun_stuff_head] {
 	display: none;
+}
+
+[saprun_stuff_form_box_logo_name] {
+	background: none;
+	box-shadow: none;
+	align-self: center;
 }

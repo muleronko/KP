@@ -1,0 +1,44 @@
+$saprun_stuff_bord $mol_page
+	head /
+		<= Head $saprun_stuff_bord_head
+	body /
+		<= Dashbord $mol_book
+			pages /
+				<= Menu_page $mol_page
+					minimal_width 300
+					title <= title_menu \Документы
+					tools /
+						<= Close $mol_link
+							sub /
+								<= Close_icon $mol_icon_cross
+					body /
+						<= Menu $mol_list
+							rows <= menu_rows /
+				<= Bord_page $mol_page
+					minimal_width 600
+					title <= title_bord \Формуляры
+					body /
+						<= Bord $mol_list
+							rows <= bord_rows /
+	foot null
+	
+$saprun_stuff_bord_head $mol_view
+	sub /
+		<= Logo_start_page $mol_image
+			uri \-/saprun/stuff/thumbs/logokp.png
+		<= Menu $mol_view
+			sub /
+				<= Link1 $mol_link
+					sub / 
+						<= events \События
+				<= Evens $mol_button_danger
+					title <= submit_label \2
+				<= Link2 $mol_link
+					sub / 
+						<= help \Тех.поддержка
+				<= Link3 $mol_link
+					sub /
+						<= Add \Еще
+		<= Exit $mol_link
+			sub /
+				<= close_title \Выход
