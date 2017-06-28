@@ -1,0 +1,11 @@
+$my_kp_dashbord $mol_book
+	pages /
+		<= Menu $mol_page
+			head null
+			body /
+				<= Dashbord $mol_view
+					sub /
+						<= Function $my_kp_dashbord_function
+			foot null
+
+$my_kp_dashbord_function $mol_view

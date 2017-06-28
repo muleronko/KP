@@ -1,0 +1,25 @@
+[saprun_stuff_body] {
+	width: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+[saprun_stuff_form_box] {
+	display: flex;
+	flex-wrap: wrap;
+	width: 22rem;
+}
+
+[saprun_stuff_form_box_table_id_control] {
+	width: 20rem;
+}
+
+[saprun_stuff_form_box_logo_main]
+{
+	box-shadow: none;
+}
+
+[saprun_stuff_head] {
+	display: none;
+}
